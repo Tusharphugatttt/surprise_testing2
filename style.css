@@ -1,0 +1,44 @@
+body {
+    background-color: black;
+    background-image: url("pexels-felix-mittermeier-956981.jpg"); /* Replace with your space image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+button {
+    /* Remove border */
+    border: yellow;
+
+    /* Add box-shadow for depth and inner shadow for hover */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+
+    /* Adjust background color */
+    background-color: #020203;
+
+    /* Adjust text color */
+    color: rgb(190, 32, 32);
+
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+button:hover {
+    /* Change background color and increase box-shadow on hover */
+    background-color: #202020;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+}

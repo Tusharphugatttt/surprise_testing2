@@ -1,0 +1,32 @@
+body {
+    background-image: url("sky-3027856_1280.jpg"); 
+    background-size: cover;
+    background-position: center;
+    color: white; 
+    font-family: sans-serif;
+    display: flex;          
+    justify-content: center; 
+    align-items: center;     
+    min-height: 100vh;  
+}
+
+
+p {
+    color: #f7f305; 
+}
+
+
+button {
+    background-color: #160404; 
+    color: yellow;
+    padding: 15px 30px;         
+    border: none;
+    border-radius: 8px;        
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out; 
+}
+
+button:hover {
+    background-color: #ffaaaa; 
+}

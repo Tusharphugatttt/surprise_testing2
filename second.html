@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Adventure - Page 2</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black; 
+            background-image: url(pexels-alex-andrews-821644.jpg);
+            color: white;
+            font-family:cursive;
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden; 
+        }
+
+        #text {
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .surprise-text {
+            color: rgb(252, 236, 12); 
+        }
+
+        .button {
+            background-color: #000080;
+            color: white;
+            padding: 10px 20px;
+            margin-top: 15px; 
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .button:hover {
+            background-color: #3333cc;
+        }
+    </style>
+</head>
+<body>
+    <div id="text">
+        <h2>Hi Tanya! Finally you opened</h2>
+    </div>
+    <button class="button" style="display:none;"> open this ;-)</button>
+    <script>
+        let count = 0; 
+        const text = document.getElementById('text');
+        const surpriseButton = document.querySelector('.button');
+
+        text.addEventListener('click', () => {
+            count++; 
+            
+            switch (count) {
+              case 1:
+                  text.textContent = "Okay, if you can read this text, you are on the right path";
+                  break;
+              case 2:
+                  text.innerHTML = "<span class='surprise-text'>Let me tell you one thing: there is a surprise at the end for you.</span>"; 
+                  break;
+              case 3:
+                  surpriseButton.style.display = 'block';
+                  break;
+            }
+        });
+
+        surpriseButton.addEventListener('click', () => {
+            window.location.href = "third.html"; 
+        });
+    </script>
+</body>
+</html>

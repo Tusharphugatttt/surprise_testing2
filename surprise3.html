@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surprise Box 3</title>
+    <link rel="stylesheet" href="style2.css"> </head>
+<body>
+    <div class="container">
+
+        <p id="text1" style="opacity: 100;">Congratulations! You chose the correct option!</p>
+        <p id="text2" style="display: none;">"What if there is no surprise for you here, either?</p>
+        <button id="openSurpriseButton" style="display: none;">Open Your Surprise</button>
+    </div>
+    <script>
+        const text1 = document.getElementById('text1');
+        const text2 = document.getElementById('text2');
+        const openSurpriseButton = document.getElementById('openSurpriseButton');
+
+       
+        const animationDuration = 2000; 
+        let opacity = 0;
+        const animationInterval = setInterval(() => {
+            opacity += 0.05;
+            text1.style.opacity = opacity;
+            if (opacity >= 1) {
+                clearInterval(animationInterval);
+            }
+        }, animationDuration / 100);
+
+        text1.addEventListener('click', () => {
+            text1.style.display = 'none';
+            text2.style.display = 'block';
+        });
+
+        text2.addEventListener('click', () => {
+            openSurpriseButton.style.display = 'block';
+        });
+
+        openSurpriseButton.addEventListener('click', () => {
+           
+            alert("Surprise! You opened the box!"); 
+        });
+        openSurpriseButton.addEventListener('click', () => {
+        window.location.href = "target_page.html";
+});
+
+    </script>
+    
+</body>
+</html>
